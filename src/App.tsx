@@ -4,12 +4,34 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 
+
+import playImg from "./assets/play.png";
+import resetImg from "./assets/reset.png";
+import workBtnClicked from "./assets/work-clicked.png";
+import workBtn from "./assets/work.png";
+import breakBtnClicked from "./assets/break-clicked.png";
+import breakBtn from "./assets/break.png";
+import breakGif from "./assets/break.gif";
+import timer from "./assets/timer.mp3";
+import closeBtn from "./assets/close.png";
+import idleGif from "./assets/idle.gif";
+import workGif from "./assets/work.gif";
+
+
+
 function App() {
 
   const [timeLeft, setTimeLeft] = useState(25*60);
   const [isRunning, setIsRunning] = useState(false); 
   const [isBreak, setIsBreak] = useState(false);
   const [encouragement, setEncouragement] = useState("");
+
+  // errors will go away once you import the assets. 
+  const [breakButtonImage, setBreakButtonImage] = useState(breakBtn);
+  const [workButtonImage, setWorkButtonImage] = useState(workBtn);
+  const [gifImage, setGifImage] = useState(idleGif);
+  const [image, setImage] = useState(playImg);
+
 
 
   //    MESSAGES
@@ -90,6 +112,13 @@ useEffect( () => {
     return() => clearInterval(timer);
   }, [isRunning, timeLeft]);
 
+  // switch mode set to false
+  useEffect( () => {
+    switchMode(false);
+  }, []);
+
+
+
   const formatTime = (seconds: number): string => {
     const m = Math.floor(seconds / 60).toString().padStart(2, '0');
 
@@ -100,34 +129,43 @@ useEffect( () => {
   const switchMode = (breakMode: boolean) => {
     setIsBreak(breakMode);
     setIsRunning(false);
+    setBreakButtonImage(breakMode ? breakBtnClicked : breakBtn);
+    setWorkButtonImage(breakMode ? workBtn : workBtnClicked);
     setTimeLeft(breakMode ? 5 * 60: 25 * 60);
+    setGifImage(idleGif);
   }
 
   const handleClick = () => {
     if (!isRunning)  {
       setIsRunning(true); 
+      setGifImage(isBreak ? breakGif : workGif);
+      setImage(resetImg);
     } else {
       setIsRunning(false);
       setTimeLeft(isBreak ? 5 * 60: 25*60);
+      setGifImage(idleGif);
+      setImage(playImg);
     }
   }
 
+  const containerClass = `home-container ${isRunning ? "background-green": ""}} `; 
+
   return (
     <>
-    <div style={{position: 'relative'}}>
+    <div className={containerClass} style={{position: 'relative'}}>
     <div>
-      <button className='closeButton'>
-        Close
+      <button className='close-button'>
+        <img src={closeBtn} alt="close"/>
       </button>
     </div>
 
     <div className="home-content">
       <div className="home-control">
         <button className ="image-button" onClick={() => switchMode(false)}>
-          Work
+          <img src={workButtonImage} alt="Work"/>
         </button>
         <button className="image-button" onClick={() => switchMode(true)}>
-          Break
+          <img src={breakButtonImage} alt="Break"/>
         </button>
       </div>
 
@@ -136,9 +174,9 @@ useEffect( () => {
       </p>
 
       <h1 className='home-timer'>{formatTime(timeLeft)}</h1>
-
+      <img src={gifImage} alt="Timer Status" className="gif-image" />
       <button className='home-button' onClick={handleClick}>
-        Start
+        <img src={image} alt="button icon"/>
       </button>
     </div>
     </div>

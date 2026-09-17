@@ -7,3 +7,7 @@
 - proper documentation and readme for the project 
 
 - add anyhting else as necessary 
+
+- add ticking noise 15 seconds before each timer ends 
+
+- and add vintage clock ringing sound 
