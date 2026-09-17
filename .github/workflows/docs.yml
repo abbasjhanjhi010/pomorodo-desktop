@@ -1,0 +1,29 @@
+name: Docs
+
+on:
+  push:
+    branches: [testing-website, main]
+    paths:
+      - "docs/**"
+      - "mkdocs.yml"
+      - "requirements-docs.txt"
+      - ".github/workflows/docs.yml"
+  pull_request:
+    paths:
+      - "docs/**"
+      - "mkdocs.yml"
+      - "requirements-docs.txt"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - run: pip install -r requirements-docs.txt
+
+      - run: mkdocs build --strict
