@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: "Pomodoro Desktop"
+message: "If you use this software, please cite it as follows."
+type: software
+
+authors:
+  - family-names: "Jhanjhi"
+    given-names: "Muhammad Abbas"
+
+repository-code: "https://github.com/MuhammadAbbas010/pomodoro-desktop"
+
+license: MIT
+version: 0.1.0
+date-released: 2026-09-18
