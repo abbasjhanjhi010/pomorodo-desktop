@@ -1,75 +1,137 @@
-# React + TypeScript + Vite
+## Project Documentation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+-<a href="Credits.md" target="_blank">Credits</a>\
+-<a href="todo.md" target="_blank">Todo</a>\
+-<a href="whatIlearnT.md" target="_blank">What I Learned</a>
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Pomorodo desktop is a simple application designed to comfortably sit in your windows/macOS taskbar, easy to access when the time calls.
 
-## React Compiler
+#### Features
+Pomorodo desktop alternates between a work and break mode, the work mode lasts for 25 minutes during which the work.gif animation plays. After which the break mode automatically renders which lasts 5 minutes and plays the break.gif animation, otherwise the program stays idle. 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+#### Preview
+<!-- HOMEPAGE 
+<details open>
+<summary>Homepage</summary>
+<br>
+<img src="images/idle-screen.png" alt="Landing page" height=35% width="35%">
+</details>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<!-- BREAK PAGE  
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+<details>
+<summary>Break timer</summary>
+<br>
+<img src="images/break-screen.png" alt="break timer" height=35% width="35%">
+</details>
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+<!-- WORK PAGE  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+<details>
+<summary>Work timer</summary>
+<br>
+<img src="images/work-screen.png" alt="work page" height=35% width="35%">
+</details>
+-->
 
-```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 
-```
+
+
+
+<table>
+  <tr>
+    <th align="center" style="background-color: #f0f0f0;"><strong>Homepage</strong></th>
+    <th align="center" style="background-color: #f0f0f0;"><strong>Work Timer</strong></th>
+    <th align="center" style="background-color: #f0f0f0;"><strong>Break Timer</strong></th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="images/idle-screen.png" alt="Pomodoro homepage screen" width="90%">
+    </td>
+    <td align="center">
+      <img src="images/work-screen.png" alt="Pomodoro work timer screen" width="90%">
+    </td>
+    <td align="center">
+      <img src="images/break-screen.png" alt="Pomodoro break timer screen" width="90%">
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table>
+  <tr>
+    <td width="33%" align="center">
+
+### 📚 Documentation
+
+<details>
+<summary>View Documentation</summary>
+
+- Installation
+- Usage
+- API Reference
+
+</details>
+
+  </td>
+
+   <td width="33%" align="center">
+
+### 🤝 Contributing
+
+<details>
+<summary>View Guidelines</summary>
+
+- Contribution Guide
+- Code of Conduct
+- Pull Requests
+
+</details>
+
+ </td>
+
+  <td width="33%" align="center">
+
+### 📄 Legal
+
+<details>
+<summary>View Legal</summary>
+
+- License
+- Privacy
+- Terms
+
+</details>
+
+  </td>
+  </tr>
+</table>
