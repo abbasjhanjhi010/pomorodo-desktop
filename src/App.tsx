@@ -62,8 +62,19 @@ useEffect( () => {
   
   if(isRunning) { 
     const messages = isBreak? workMessages : cheerMessages;
+    setEncouragement(messages[0]);      //starts with messages in order
+    let index =1
+
+    messageInterval = setInterval(() => {
+      setEncouragement(messages[index])
+      index = (index + 1) % messages.length;
+    }, 12000);   // alternates every 12 seconds
+  } else {
+    setEncouragement("");
   }
-})
+
+  return() => clearInterval(messageInterval);
+}, [isRunning, isBreak]);
 
 
 
@@ -120,7 +131,9 @@ useEffect( () => {
         </button>
       </div>
 
-      <p>You can do it!</p>
+      <p className={`encouragement-text ${!isRunning ? "hidden" : ""}`}>
+        { encouragement }
+      </p>
 
       <h1 className='home-timer'>{formatTime(timeLeft)}</h1>
 

@@ -1,184 +1,259 @@
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
+/* ============================================
+   Pomodoro Timer — Italian Trattoria Theme 🍅
+   ============================================ */
 
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
+:root {
+  --tomato-red: #d62828;
+  --tomato-dark: #9d1c1c;
+  --basil-green: #2d6a4f;
+  --basil-dark: #1b4332;
+  --cream: #fdf6e3;
+  --wheat: #f4e8c1;
+  --charcoal: #2b2b2b;
+  --gold: #e9b44c;
+
+  --shadow-soft: 0 4px 14px rgba(0, 0, 0, 0.15);
+  --shadow-strong: 0 8px 24px rgba(0, 0, 0, 0.25);
+  --radius: 18px;
 }
 
-.hero {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cream);
+
+  /* subtle checkered "tablecloth" pattern */
+  background-image:
+    linear-gradient(45deg, rgba(214, 40, 40, 0.06) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(214, 40, 40, 0.06) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(214, 40, 40, 0.06) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(214, 40, 40, 0.06) 75%);
+  background-size: 60px 60px;
+  background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
+}
+
+/* ============================================
+   Outer wrapper
+   ============================================ */
+
+.home-content {
   position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
-}
-
-#center {
+  width: 380px;
+  max-width: 90vw;
+  padding: 40px 32px 36px;
+  border-radius: var(--radius);
+  background: var(--wheat);
+  box-shadow: var(--shadow-strong);
+  border: 6px solid var(--cream);
+  outline: 3px solid var(--tomato-red);
+  outline-offset: -14px;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
+  align-items: center;
+  gap: 20px;
 }
 
-#next-steps {
+/* thin Italian flag stripe along the top */
+.home-content::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 6px;
+  border-radius: 4px;
+  background: linear-gradient(
+    to right,
+    var(--basil-green) 0%,
+    var(--basil-green) 33%,
+    var(--cream) 33%,
+    var(--cream) 66%,
+    var(--tomato-red) 66%,
+    var(--tomato-red) 100%
+  );
+}
+
+/* ============================================
+   Close button
+   ============================================ */
+
+.closeButton {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: var(--tomato-red);
+  color: var(--cream);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.closeButton:hover {
+  background: var(--tomato-dark);
+  transform: scale(1.1) rotate(90deg);
+}
+
+/* ============================================
+   Work / Break toggle
+   ============================================ */
+
+.home-control {
   display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
-
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
+  gap: 10px;
+  background: var(--cream);
+  padding: 6px;
+  border-radius: 999px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
+.image-button {
+  flex: 1;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--charcoal);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
 }
 
-#next-steps ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
+.image-button:hover {
+  transform: translateY(-1px);
 }
 
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
+/* Work button active state — you can toggle this class in JS based on !isBreak */
+.image-button.active-work {
+  background: var(--tomato-red);
+  color: var(--cream);
+  box-shadow: var(--shadow-soft);
 }
 
-.ticks {
-  position: relative;
-  width: 100%;
+/* Break button active state — toggle based on isBreak */
+.image-button.active-break {
+  background: var(--basil-green);
+  color: var(--cream);
+  box-shadow: var(--shadow-soft);
+}
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
+/* ============================================
+   Tomato mascot / gif
+   ============================================ */
+
+.tomato-gif {
+  width: 110px;
+  height: auto;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.2));
+  animation: bob 2.4s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+/* pulse a little faster while the timer is running */
+.tomato-gif.running {
+  animation: bob 1.1s ease-in-out infinite;
+}
+
+/* ============================================
+   Timer display
+   ============================================ */
+
+.home-timer {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--tomato-dark);
+  letter-spacing: 0.02em;
+  text-shadow: 2px 2px 0 var(--cream);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================
+   Encouragement / fact text
+   ============================================ */
+
+.encouragement-text {
+  min-height: 1.4em;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--basil-dark);
+  padding: 8px 14px;
+  background: rgba(45, 106, 79, 0.08);
+  border-left: 3px solid var(--basil-green);
+  border-radius: 6px;
+  max-width: 100%;
+  transition: opacity 0.4s ease;
+}
+
+.encouragement-text.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ============================================
+   Start / Stop button
+   ============================================ */
+
+.home-button {
+  padding: 12px 40px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--tomato-red), var(--tomato-dark));
+  color: var(--cream);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.home-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-strong);
+}
+
+.home-button:active {
+  transform: translateY(0);
+}
+
+/* ============================================
+   Small screens
+   ============================================ */
+
+@media (max-width: 420px) {
+  .home-content {
+    padding: 32px 20px 28px;
   }
 
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
+  .home-timer {
+    font-size: 3.2rem;
   }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
+
+  .tomato-gif {
+    width: 90px;
   }
 }
