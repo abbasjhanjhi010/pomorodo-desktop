@@ -1,5 +1,10 @@
 ## Project Documentation
 
+![GitHub release](https://img.shields.io/github/v/release/MuhammadAbbas010/pomorodo-desktop)&nbsp;
+[![Download](https://img.shields.io/github/v/release/MuhammadAbbas010/pomorodo-desktop?label=Download)](https://github.com/MuhammadAbbas010/pomorodo-desktop/releases/latest)&nbsp;
+[![License: MIT](https://img.shields.io/badge/License-MIT-maroon.svg)](LICENSE)&nbsp;
+![Sessions Tracked 🍅](https://img.shields.io/endpoint?url=https://YOUR-DOMAIN.com/api/sessions)&nbsp;
+
 This project's docs (install guide, changelog, credits, and what-I-learnt
 notes) live in [`/docs`](docs/) and are built with [MkDocs](https://www.mkdocs.org/).
 
@@ -7,11 +12,6 @@ notes) live in [`/docs`](docs/) and are built with [MkDocs](https://www.mkdocs.o
 pip install -r requirements-docs.txt
 mkdocs serve   # preview locally at http://127.0.0.1:8000
 ```
-
--<a href="Credits.md" target="_blank">Credits</a>\
--<a href="todo.md" target="_blank">Todo</a>\
--<a href="whatIlearnT.md" target="_blank">What I Learned</a>
-
 
 Pomorodo desktop is a simple application designed to comfortably sit in your windows/macOS taskbar, easy to access when the time calls.
 
@@ -44,13 +44,6 @@ Pomorodo desktop alternates between a work and break mode, the work mode lasts f
 </details>
 -->
 
-
-
-
-
-
-
-
 <table>
   <tr>
     <th align="center" style="background-color: #f0f0f0;"><strong>Homepage</strong></th>
@@ -71,30 +64,11 @@ Pomorodo desktop alternates between a work and break mode, the work mode lasts f
 </table>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#### Read More
+[Documentation](https://muhammadabbas010.github.io/pomorodo-desktop/)
+[Install here](https://muhammadabbas010.github.io/pomorodo-desktop/install/)
+[Credits](https://muhammadabbas010.github.io/pomorodo-desktop/credits/)
+<!-- 
 <table>
   <tr>
     <td width="33%" align="center">
@@ -143,3 +117,4 @@ Pomorodo desktop alternates between a work and break mode, the work mode lasts f
   </td>
   </tr>
 </table>
+-->
