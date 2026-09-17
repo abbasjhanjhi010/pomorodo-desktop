@@ -11,3 +11,5 @@
 - add ticking noise 15 seconds before each timer ends 
 
 - and add vintage clock ringing sound 
+
+- add randomized cheer messages 

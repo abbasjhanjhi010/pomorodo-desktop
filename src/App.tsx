@@ -1,7 +1,4 @@
-import { useState, useEffect, use } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 
@@ -32,6 +29,9 @@ function App() {
   const [gifImage, setGifImage] = useState(idleGif);
   const [image, setImage] = useState(playImg);
 
+  // timer audio 
+  const timerSound = new Audio(timer);
+
 
 
   //    MESSAGES
@@ -47,6 +47,7 @@ const workMessages = [
   "DnD user in Deep Focus Mode",
 ];
 
+/*
 // Cheer messages (shown when a session/break completes)
 const cheerMessages = [
   "Nice work! Another Pomodoro in the books.",
@@ -60,6 +61,7 @@ const cheerMessages = [
   "Look at you, getting things done.",
   "Another one down. Keep the momentum going.",
 ];
+*/
 
 // Fun facts (shown during breaks or as rotating tips)
 const funFacts = [
@@ -83,7 +85,7 @@ useEffect( () => {
   let messageInterval: NodeJS.Timeout;
   
   if(isRunning) { 
-    const messages = isBreak? workMessages : cheerMessages;
+    const messages = isBreak? workMessages : funFacts;
     setEncouragement(messages[0]);      //starts with messages in order
     let index =1
 
@@ -117,6 +119,19 @@ useEffect( () => {
     switchMode(false);
   }, []);
 
+
+  // timer alert
+     useEffect(() => {
+    if (timeLeft === 0 && isRunning) {
+        timerSound.play().catch(err => {
+            console.error("Audio play failed:", err);
+        });
+        setIsRunning(false); // Optional: auto-stop the timer
+        setImage(playImg);   // Reset to play button
+        setGifImage(idleGif); // Reset to idle gif
+        setTimeLeft(isBreak ? 5 * 60 : 25 * 60);
+    }
+}, [timeLeft]);
 
 
   const formatTime = (seconds: number): string => {
@@ -154,7 +169,7 @@ useEffect( () => {
     <>
     <div className={containerClass} style={{position: 'relative'}}>
     <div>
-      <button className='close-button'>
+      <button className='close-button' onClick={() => window.electronAPI?.closeApp()}>
         <img src={closeBtn} alt="close"/>
       </button>
     </div>
