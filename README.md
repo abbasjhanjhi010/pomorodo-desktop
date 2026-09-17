@@ -1,5 +1,13 @@
 ## Project Documentation
 
+This project's docs (install guide, changelog, credits, and what-I-learnt
+notes) live in [`/docs`](docs/) and are built with [MkDocs](https://www.mkdocs.org/).
+
+```bash
+pip install -r requirements-docs.txt
+mkdocs serve   # preview locally at http://127.0.0.1:8000
+```
+
 -<a href="Credits.md" target="_blank">Credits</a>\
 -<a href="todo.md" target="_blank">Todo</a>\
 -<a href="whatIlearnT.md" target="_blank">What I Learned</a>

@@ -1,0 +1,59 @@
+# Install
+
+Pomorodo Desktop is an [Electron](https://www.electronjs.org/) app built on
+[Vite](https://vite.dev/) + [React](https://react.dev/) + TypeScript. There's no
+published installer yet, so for now you build it from source.
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) 18 or newer, with npm
+- [Git](https://git-scm.com/)
+
+## 1. Clone the repository
+
+```bash
+git clone https://github.com/MuhammadAbbas010/pomorodo-desktop.git
+cd pomorodo-desktop
+```
+
+## 2. Install dependencies
+
+```bash
+npm install
+```
+
+## 3. Run it
+
+The web UI and the Electron shell are two separate scripts:
+
+```bash
+# Preview the UI in a regular browser tab, with hot reload
+npm run dev
+```
+
+```bash
+# Build the UI once, then launch it inside the Electron window
+npm run build
+npm run electron
+```
+
+The Electron window always loads the compiled app from `dist/`, so re-run
+`npm run build` after any change before re-launching `npm run electron`.
+
+## 4. Lint (optional)
+
+```bash
+npm run lint
+```
+
+## Building a distributable
+
+There's no packaging script wired up yet (see the
+[changelog](changelog.md) for what's in progress). In the meantime,
+`npm run build` produces a `dist/` folder you can load with
+`npm run electron`, or package yourself with a tool like
+[electron-builder](https://www.electron.build/).
+
+!!! note
+    This page describes the current build-from-source workflow. Once a
+    packaged release exists, download links will be added here.

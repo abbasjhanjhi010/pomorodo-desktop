@@ -1,0 +1,4 @@
+# Dependencies for building the documentation site (mkdocs.yml).
+# Install with: pip install -r requirements-docs.txt
+# Then run:     mkdocs serve   (preview)  or  mkdocs build  (static output in site/)
+mkdocs-material>=9.5

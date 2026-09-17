@@ -1,0 +1,80 @@
+site_name: Pomorodo Desktop
+site_description: A minimal Pomodoro timer that sits in your taskbar.
+site_author: Abbas Jhanjhi
+site_url: https://muhammadabbas010.github.io/pomorodo-desktop/
+
+repo_url: https://github.com/MuhammadAbbas010/pomorodo-desktop
+repo_name: MuhammadAbbas010/pomorodo-desktop
+edit_uri: edit/testing-website/docs/
+
+copyright: >
+  Pomorodo Desktop is a personal project by
+  <a href="https://github.com/MuhammadAbbas010" target="_blank" rel="noopener">Abbas Jhanjhi</a>.
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/MuhammadAbbas010
+      name: MuhammadAbbas010 on GitHub
+    - icon: fontawesome/solid/globe
+      link: https://abbasii.dev
+      name: Personal site
+
+theme:
+  name: material
+  favicon: assets/favicon.svg
+  logo: assets/favicon.svg
+  icon:
+    repo: fontawesome/brands/github
+  font: false
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: deep-purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep-purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - content.action.edit
+    - content.code.copy
+    - toc.follow
+
+# No search plugin and no i18n/alternate-language config on purpose -
+# this keeps the header down to: title, nav, GitHub link, theme toggle.
+plugins: []
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/changelog.js
+
+nav:
+  - Home: index.md
+  - Install: install.md
+  - What I Learnt: what-i-learnt.md
+  - Changelog: changelog.md
+  - Credits: credits.md
