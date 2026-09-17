@@ -136,6 +136,7 @@ img {
 
 .image-button:active {
   transform: scale(0.98);
+  text-decoration-color: black;
 }
 
 /* ============================================

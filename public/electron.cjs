@@ -8,8 +8,8 @@ function createMainWindow() {
 
     const mainWindow = new BrowserWindow({
         title: 'Pomorodo Desktop',
-        width: 500,
-        height: 500,
+        width: 375,
+        height: 435,
         frame: false,
         resizable: false,
         backgroundColor: '#fdf3d7',
