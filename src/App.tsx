@@ -21,8 +21,19 @@ function App() {
 
   const formatTime = (seconds: number): string => {
     const m = Math.floor(seconds / 60).toString().padStart(2, '0');
-  }
 
+    const s = (seconds % 60).toString().padStart(2, '0');
+    return `${m}:${s}`;
+  };
+
+  const handleClick = () => {
+    if (!isRunning)  {
+      setIsRunning(true); 
+    } else {
+      setIsRunning(false);
+      setTimeLeft(25*60);
+    }
+  }
 
   return (
     <>
@@ -45,9 +56,9 @@ function App() {
 
       <p>You can do it!</p>
 
-      <h1 className='home-timer'>25:00</h1>
+      <h1 className='home-timer'>{formatTime(timeLeft)}</h1>
 
-      <button className='home-button'>
+      <button className='home-button' onClick={handleClick}>
         Start
       </button>
     </div>
