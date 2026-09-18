@@ -22,8 +22,8 @@ extra:
 
 theme:
   name: material
-  favicon: assets/icon.ico
-  logo: assets/icon.ico
+  favicon: build/icon.ico
+  logo: build/icon.ico
   icon: 
     repo: fontawesome/brands/github
   font: false
