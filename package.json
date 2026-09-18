@@ -13,7 +13,8 @@
     "electron": "electron public/electron.cjs",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dist": "npm run build && electron-builder"
   },
   "keywords": ["desktop-app", "electron-app", "pomorodo", "productivity", "typescript", "typescript-react", "vite"],
   "license": "MIT",
@@ -39,10 +40,9 @@
   },
   "build": {
     "directories": { "output": "release" },
-    "appId": "com.TaliWorks.PomorodoDesktop",
+    "appId": "com.MuhammadAbbas010.PomorodoDesktop",
     "files": ["dist/**/*", "public/electron.cjs", "public/preload.cjs", "package.json"],
     "mac": { "target": "dmg", "icon": "build/icon.icns"},
-    "win": { "target": "nsis", "icon": "build/icon.ico"},
-    "dist": "npm run build && electron-builder"
+    "win": { "target": "nsis", "icon": "build/icon.ico"}
   }
 }
