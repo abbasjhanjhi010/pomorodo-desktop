@@ -10,4 +10,10 @@
 - add a todo list to the app
 - find a better name for the app
 - create professional documentation for the project
+- add an auto-update feature
+- final touches
+- total user sessions tracking 
+
+
+- maintenece and slowly improving the app overtime
 

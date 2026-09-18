@@ -6,7 +6,7 @@
   "description": "A compact, easy to install pomorodo app to keep you productive and your work streamlined.",
   "main": "public/electron.cjs",
   "homepage": ".",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
