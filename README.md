@@ -1,9 +1,14 @@
 ## Project Documentation
-
-![GitHub release](https://img.shields.io/github/v/release/MuhammadAbbas010/pomorodo-desktop)&nbsp;
-[![Download](https://img.shields.io/github/v/release/MuhammadAbbas010/pomorodo-desktop?label=Download)](https://github.com/MuhammadAbbas010/pomorodo-desktop/releases/latest)&nbsp;
-[![License: MIT](https://img.shields.io/badge/License-MIT-maroon.svg)](LICENSE)&nbsp;
-![Sessions Tracked 🍅](https://img.shields.io/endpoint?url=https://YOUR-DOMAIN.com/api/sessions)&nbsp;
+<p align="center">
+  <img src="https://img.shields.io/github/v/release/MuhammadAbbas010/pomorodo-desktop" alt="GitHub release">&nbsp;
+  <a href="https://github.com/MuhammadAbbas010/pomorodo-desktop/releases/latest">
+    <img src="https://img.shields.io/github/v/release/MuhammadAbbas010/pomorodo-desktop?label=Download" alt="Download">
+  </a>&nbsp;
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-maroon.svg" alt="License: MIT">
+  </a>&nbsp;
+  <img src="https://img.shields.io/endpoint?url=https://YOUR-DOMAIN.com/api/sessions" alt="Sessions Tracked 🍅">
+</p>
 
 This project's docs (install guide, changelog, credits, and what-I-learnt
 notes) live in [`/docs`](docs/) and are built with [MkDocs](https://www.mkdocs.org/).
