@@ -24,7 +24,7 @@ theme:
   name: material
   favicon: assets/icon.ico
   logo: assets/icon.ico
-  icon: assets/icon.ico
+  icon: 
     repo: fontawesome/brands/github
   font: false
   palette:
