@@ -22,9 +22,9 @@ extra:
 
 theme:
   name: material
-  favicon: assets/favicon.svg
-  logo: assets/favicon.svg
-  icon:
+  favicon: assets/icon.ico
+  logo: assets/icon.ico
+  icon: assets/icon.ico
     repo: fontawesome/brands/github
   font: false
   palette:
