@@ -1,10 +1,22 @@
 # Install
 
 Pomorodo Desktop is an [Electron](https://www.electronjs.org/) app built on
-[Vite](https://vite.dev/) + [React](https://react.dev/) + TypeScript. There's no
-published installer yet, so for now you build it from source.
+[Vite](https://vite.dev/) + [React](https://react.dev/) + TypeScript. Pomorodo desktop allows users to either download through an installer or using Node.js and Git.
 
-## Prerequisites
+
+## Download
+
+#### Windows Installer
+
+- [Windows (.exe)](https://github.com/MuhammadAbbas010/pomorodo-desktop/releases/latest/download/Pomorodo%20Desktop%20Setup%200.1.0.exe)
+
+#### MacOS Installer
+- [macOS Apple Silicon (.dmg)](https://github.com/MuhammadAbbas010/pomorodo-desktop/releases/latest/download/Pomorodo%20Desktop-0.1.0-arm64.dmg)
+
+
+## Manual Node.js and Git 
+
+### Prerequisites
 
 - [Node.js](https://nodejs.org/) 18 or newer, with npm
 - [Git](https://git-scm.com/)
