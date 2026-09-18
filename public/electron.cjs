@@ -13,6 +13,7 @@ function createMainWindow() {
         frame: false,
         resizable: false,
         backgroundColor: '#fdf3d7',
+        icon: path.join(__dirname, 'icon.ico'),
         webPreferences: {
             preload: path.join(__dirname, 'preload.cjs'),
         },
