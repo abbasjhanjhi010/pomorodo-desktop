@@ -14,7 +14,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "dist": "npm run build && electron-builder"
+    "dist": "npm run build && electron-builder --publish never"
   },
   "keywords": ["desktop-app", "electron-app", "pomorodo", "productivity", "typescript", "typescript-react", "vite"],
   "license": "MIT",
