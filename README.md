@@ -1,4 +1,5 @@
-## Project Documentation
+<h2 align="center">Project Documentation</h2>
+
 <p align="center">
   <img src="https://img.shields.io/github/v/release/MuhammadAbbas010/pomorodo-desktop" alt="GitHub release">&nbsp;
   <a href="https://github.com/MuhammadAbbas010/pomorodo-desktop/releases/latest">
