@@ -69,6 +69,9 @@ Pomorodo desktop alternates between a work and break mode, the work mode lasts f
 ⮡  &nbsp;[Install here](https://muhammadabbas010.github.io/pomorodo-desktop/install/)\
 ⮡  &nbsp;[Credits](https://muhammadabbas010.github.io/pomorodo-desktop/credits/)
 <!-- 
+Might still add a contributing and legal page over here
+
+
 <table>
   <tr>
     <td width="33%" align="center">
