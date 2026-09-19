@@ -25,6 +25,19 @@
   --gh-accent: #4493f8;
 }
 
+/* Bump the header/nav logo ~25% above Material's default (1.2rem / 2.4rem) */
+.md-header__button.md-logo img {
+  height: 1.5rem;
+}
+
+.md-header__button.md-logo {
+  padding-left: 0.8rem;
+}
+
+.md-nav__title .md-logo img {
+  height: 3rem;
+}
+
 /* Flatten the chrome: no drop shadow on the header, thin hairline instead */
 .md-header {
   box-shadow: none;
