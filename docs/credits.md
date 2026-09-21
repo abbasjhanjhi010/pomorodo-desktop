@@ -7,7 +7,7 @@
 
 <span class="socials">
 [Personal site](https://abbasii.dev) ·
-[GitHub @MuhammadAbbas010](https://github.com/MuhammadAbbas010)
+[GitHub @abbasjhanjhi010](https://github.com/abbasjhanjhi010)
 </span>
 </div>
 

@@ -41,6 +41,6 @@ and break for you.
 - [Changelog](changelog.md) - the latest commits, pulled live from GitHub.
 - [Credits](credits.md) - assets, tutorials and tools this project stands on.
 
-This documentation lives in [`/docs`](https://github.com/MuhammadAbbas010/pomorodo-desktop/tree/testing-website/docs)
+This documentation lives in [`/docs`](https://github.com/abbasjhanjhi010/pomorodo-desktop/tree/testing-website/docs)
 and is built with [MkDocs](https://www.mkdocs.org/) - use the GitHub link in the
 header for source, issues and the full commit history.

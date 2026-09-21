@@ -5,7 +5,7 @@
  * approach GitHub's own "recently pushed" widgets use.
  */
 (function () {
-  const REPO = "MuhammadAbbas010/pomorodo-desktop";
+  const REPO = "abbasjhanjhi010/pomorodo-desktop";
   const COMMITS_API = `https://api.github.com/repos/${REPO}/commits?per_page=10`;
   const COMMITS_URL = `https://github.com/${REPO}/commits/main`;
 
