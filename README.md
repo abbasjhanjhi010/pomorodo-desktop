@@ -1,9 +1,9 @@
 <h2 align="center">Project Documentation</h2>
 
 <p align="center">
-  <img src="https://img.shields.io/github/v/release/MuhammadAbbas010/pomorodo-desktop" alt="GitHub release">&nbsp;
-  <a href="https://github.com/MuhammadAbbas010/pomorodo-desktop/releases/latest">
-    <img src="https://img.shields.io/github/v/release/MuhammadAbbas010/pomorodo-desktop?label=Download" alt="Download">
+  <img src="https://img.shields.io/github/v/release/abbasjhanjhi010/pomorodo-desktop" alt="GitHub release">&nbsp;
+  <a href="https://github.com/abbasjhanjhi010/pomorodo-desktop/releases/latest">
+    <img src="https://img.shields.io/github/v/release/abbasjhanjhi010/pomorodo-desktop?label=Download" alt="Download">
   </a>&nbsp;
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-maroon.svg" alt="License: MIT">
@@ -71,9 +71,9 @@ Pomorodo desktop alternates between a work and break mode, the work mode lasts f
 
 
 #### Read More
-⮡  &nbsp;[Documentation](https://muhammadabbas010.github.io/pomorodo-desktop/)\
-⮡  &nbsp;[Install here](https://muhammadabbas010.github.io/pomorodo-desktop/install/)\
-⮡  &nbsp;[Credits](https://muhammadabbas010.github.io/pomorodo-desktop/credits/)
+⮡  &nbsp;[Documentation](https://abbasjhanjhi010.github.io/pomorodo-desktop/)\
+⮡  &nbsp;[Install here](https://abbasjhanjhi010.github.io/pomorodo-desktop/install/)\
+⮡  &nbsp;[Credits](https://abbasjhanjhi010.github.io/pomorodo-desktop/credits/)
 <!-- 
 Might still add a contributing and legal page over here
 

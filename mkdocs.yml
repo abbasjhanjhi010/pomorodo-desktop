@@ -1,21 +1,21 @@
 site_name: Pomorodo Desktop
 site_description: A minimal Pomodoro timer that sits in your taskbar.
 site_author: Abbas Jhanjhi
-site_url: https://muhammadabbas010.github.io/pomorodo-desktop/
+site_url: https://abbasjhanjhi010.github.io/pomorodo-desktop/
 
-repo_url: https://github.com/MuhammadAbbas010/pomorodo-desktop
-repo_name: MuhammadAbbas010/pomorodo-desktop
+repo_url: https://github.com/abbasjhanjhi010/pomorodo-desktop
+repo_name: abbasjhanjhi010/pomorodo-desktop
 edit_uri: edit/testing-website/docs/
 
 copyright: >
   Pomorodo Desktop is a personal project by
-  <a href="https://github.com/MuhammadAbbas010" target="_blank" rel="noopener">Abbas Jhanjhi</a>.
+  <a href="https://github.com/abbasjhanjhi010" target="_blank" rel="noopener">Abbas Jhanjhi</a>.
 
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/MuhammadAbbas010
-      name: MuhammadAbbas010 on GitHub
+      link: https://github.com/abbasjhanjhi010
+      name: abbasjhanjhi010 on GitHub
     - icon: fontawesome/solid/globe
       link: https://abbasii.dev
       name: Personal site

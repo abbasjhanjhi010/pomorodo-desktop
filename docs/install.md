@@ -8,10 +8,10 @@ Pomorodo Desktop is an [Electron](https://www.electronjs.org/) app built on
 
 #### Windows Installer
 
-- [Windows (.exe)](https://github.com/MuhammadAbbas010/pomorodo-desktop/releases/latest/download/Pomorodo%20Desktop%20Setup%200.1.0.exe)
+- [Windows (.exe)](https://github.com/abbasjhanjhi010/pomorodo-desktop/releases/latest/download/Pomorodo.Desktop.Setup.0.1.0.exe)
 
 #### MacOS Installer
-- [macOS Apple Silicon (.dmg)](https://github.com/MuhammadAbbas010/pomorodo-desktop/releases/latest/download/Pomorodo%20Desktop-0.1.0-arm64.dmg)
+- [macOS Apple Silicon (.dmg)](https://github.com/abbasjhanjhi010/pomorodo-desktop/releases/latest/download/Pomorodo.Desktop-0.1.0-arm64.dmg)
 
 
 ## Manual Node.js and Git 
@@ -24,7 +24,7 @@ Pomorodo Desktop is an [Electron](https://www.electronjs.org/) app built on
 ## 1. Clone the repository
 
 ```bash
-git clone https://github.com/MuhammadAbbas010/pomorodo-desktop.git
+git clone https://github.com/abbasjhanjhi010/pomorodo-desktop.git
 cd pomorodo-desktop
 ```
 
