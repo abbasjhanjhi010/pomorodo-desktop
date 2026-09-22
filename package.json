@@ -42,7 +42,7 @@
     "directories": { "output": "release" },
     "appId": "com.abbasjhanjhi010.PomorodoDesktop",
     "files": ["dist/**/*", "public/electron.cjs", "public/preload.cjs", "package.json"],
-    "mac": { "target": "dmg", "icon": "build/icon.icns"},
-    "win": { "target": "nsis", "icon": "build/icon.ico"}
+    "mac": { "target": "dmg", "icon": "build/icon.icns", "artifactName": "Pomorodo Desktop.dmg" },
+    "win": { "target": "nsis", "icon": "build/icon.ico", "artifactName": "Pomorodo Desktop Setup.exe" }
   }
 }
