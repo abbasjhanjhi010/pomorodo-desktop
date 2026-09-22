@@ -1,0 +1,188 @@
+/*
+ * Minimal, GitHub-flavoured skin on top of Material for MkDocs.
+ * Goal: read like a project README/repo page, not a marketing site.
+ * Font stack and border/radius values are lifted from GitHub's Primer
+ * design system (https://primer.style) - see credits.md.
+ */
+
+:root {
+  --md-text-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --md-code-font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+
+  --gh-border: #d0d7de;
+  --gh-canvas-subtle: #f6f8fa;
+  --gh-fg-muted: #57606a;
+  --gh-accent: #0969da;
+  --gh-radius: 6px;
+}
+
+[data-md-color-scheme="slate"] {
+  --gh-border: #30363d;
+  --gh-canvas-subtle: #161b22;
+  --gh-fg-muted: #8b949e;
+  --gh-accent: #4493f8;
+}
+
+/* Bump the header/nav logo ~25% above Material's default (1.2rem / 2.4rem) */
+.md-header__button.md-logo img {
+  height: 1.5rem;
+}
+
+.md-header__button.md-logo {
+  padding-left: 0.8rem;
+}
+
+.md-nav__title .md-logo img {
+  height: 3rem;
+}
+
+/* Flatten the chrome: no drop shadow on the header, thin hairline instead */
+.md-header {
+  box-shadow: none;
+  border-bottom: 1px solid var(--gh-border);
+}
+
+.md-tabs {
+  display: none;
+}
+
+/* Squared-off, GitHub-style corners instead of Material's default rounding */
+.md-typeset .admonition,
+.md-typeset details,
+.md-typeset code,
+.md-typeset pre,
+.md-search__form,
+.md-typeset table:not([class]),
+.md-typeset img {
+  border-radius: var(--gh-radius);
+}
+
+.md-typeset table:not([class]) {
+  border: 1px solid var(--gh-border);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--gh-canvas-subtle);
+}
+
+/* Headings get the understated bottom rule GitHub renders for README.md */
+.md-typeset h1,
+.md-typeset h2 {
+  border-bottom: 1px solid var(--gh-border);
+  padding-bottom: 0.3em;
+}
+
+.md-typeset a {
+  color: var(--gh-accent);
+}
+
+/* Repo summary card (stars/forks) already ships from mkdocs-material;
+   just tone the spacing down so it reads like a repo header, not a badge wall */
+.md-source__repository {
+  font-weight: 500;
+}
+
+/* Screenshot gallery grid used on the home page */
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.screenshot-grid figure {
+  margin: 0;
+  border: 1px solid var(--gh-border);
+  border-radius: var(--gh-radius);
+  overflow: hidden;
+  background: var(--gh-canvas-subtle);
+}
+
+.screenshot-grid img {
+  display: block;
+  width: 100%;
+}
+
+.screenshot-grid figcaption {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  color: var(--gh-fg-muted);
+  border-top: 1px solid var(--gh-border);
+  text-align: center;
+}
+
+/* Changelog / commit feed */
+.commit-feed {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  border: 1px solid var(--gh-border);
+  border-radius: var(--gh-radius);
+  overflow: hidden;
+}
+
+.commit-feed li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--gh-border);
+  font-size: 0.85rem;
+}
+
+.commit-feed li:last-child {
+  border-bottom: none;
+}
+
+.commit-feed img.avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.commit-feed .commit-message {
+  font-weight: 600;
+  color: var(--md-typeset-color);
+}
+
+.commit-feed .commit-meta {
+  color: var(--gh-fg-muted);
+  font-size: 0.75rem;
+  margin-top: 0.15rem;
+}
+
+.commit-feed .commit-sha {
+  font-family: var(--md-code-font-family);
+  color: var(--gh-accent);
+}
+
+.commit-feed-status {
+  color: var(--gh-fg-muted);
+  font-size: 0.85rem;
+}
+
+/* Credits / people footer, styled after a repo's Contributors card */
+.credit-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid var(--gh-border);
+  border-radius: var(--gh-radius);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.credit-card img.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.credit-card .socials a {
+  margin-right: 0.75rem;
+  font-weight: 500;
+}
